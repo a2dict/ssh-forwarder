@@ -199,7 +199,8 @@ def valid_scp_params(f, t):
     remote_path_count = len([1 for n in [f, t] if n.startswith(':')])
     if remote_path_count != 1:
         warn('参数错误，scp必须有一个参数为远程地址（以":"开头）\n')
-
+        return False
+    
     return True
 
 
